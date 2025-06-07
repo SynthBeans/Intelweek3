@@ -226,6 +226,83 @@ body > p {
   margin-top: 32px;        /* Add space above */
 }
 
+/* Sleek and modern style for the 3 info boxes under the timeline */
+.intel-info-box {
+  background: transparent;      /* No visible box background */
+  color: #ffffff;               /* White text for contrast */
+  border: none;                 /* No border */
+  box-shadow: none;             /* No shadow */
+  border-radius: 0;             /* No rounded corners */
+  padding: 0 0 32px 0;          /* Only bottom padding for spacing */
+  max-width: 340px;
+  min-width: 220px;
+  width: 100%;
+  margin: 0;
+  transition: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.intel-info-box h2 {
+  color: #00a6e0;               /* Lighter Intel blue for headings */
+  font-size: 1.7em;             /* Increased font size for header */
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.intel-info-box p {
+  color: #e0f7fa;               /* Light blue for paragraph text */
+  font-size: 1.22em;            /* Increased font size for body */
+  margin-bottom: 22px;
+}
+
+.intel-info-box .btn-primary {
+  background: #024374;
+  border: none;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 8px 22px;
+  font-size: 1em;
+  transition: background 0.15s;
+}
+
+.intel-info-box .btn-primary:hover {
+  background: #005b99;
+}
+
+/* Section background after the timeline: darker blue for contrast */
+.intel-info-section-bg {
+  background: #002244; /* Very dark Intel blue */
+  width: 100%;
+  padding: 40px 0 40px 0;
+}
+
+/* Space the boxes closer together on all screens */
+.intel-info-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 18px; /* Closer spacing */
+  margin: 36px 0 36px 0;
+  flex-wrap: wrap;
+}
+
+/* Stack boxes vertically and adjust spacing on small screens */
+@media (max-width: 700px) {
+  .intel-info-row {
+    flex-direction: column;
+    gap: 14px;
+    margin: 24px 0 24px 0;
+    align-items: center;
+  }
+  .intel-info-box {
+    max-width: 96vw;
+    padding: 18px 8vw 18px 8vw;
+  }
+}
+
 /* Responsive styles for mobile screens */
 @media (max-width: 700px) {
   header {
